@@ -1,0 +1,2 @@
+# Dependencias principales del proyecto Backend
+Django>=5.0,<6.0

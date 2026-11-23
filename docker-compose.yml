@@ -1,0 +1,11 @@
+services:
+  # Servicio principal que contiene el entorno virtual de desarrollo (Python + Django + Vite)
+  web:
+    build: .
+    container_name: entorno_desarrollo_web
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000" # Puerto para Django
+      - "5173:5173" # Puerto para Vite.js
+    tty: true
