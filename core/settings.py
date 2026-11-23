@@ -122,19 +122,11 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # --- CONFIGURACION DEL PROYECTO Y ROLES ---
-INSTALLED_APPS += ['usuarios']
+if 'usuarios' not in INSTALLED_APPS:
+    INSTALLED_APPS.append('usuarios')
+
 TEMPLATES[0]['DIRS'] = [BASE_DIR / 'templates']
+ALLOWED_HOSTS = ['*']
 LOGIN_URL = 'login'
 CSRF_TRUSTED_ORIGINS = ['https://*.app.github.dev']
 
-# --- CONFIGURACION DEL PROYECTO Y ROLES ---
-INSTALLED_APPS += ['usuarios']
-TEMPLATES[0]['DIRS'] = [BASE_DIR / 'templates']
-LOGIN_URL = 'login'
-CSRF_TRUSTED_ORIGINS = ['https://*.app.github.dev']
-
-# --- CONFIGURACION DEL PROYECTO Y ROLES ---
-INSTALLED_APPS += ['usuarios']
-TEMPLATES[0]['DIRS'] = [BASE_DIR / 'templates']
-LOGIN_URL = 'login'
-CSRF_TRUSTED_ORIGINS = ['https://*.app.github.dev']
