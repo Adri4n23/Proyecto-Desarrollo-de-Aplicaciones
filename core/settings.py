@@ -120,3 +120,9 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# --- CONFIGURACION DEL PROYECTO Y ROLES ---
+INSTALLED_APPS += ['usuarios']
+TEMPLATES[0]['DIRS'] = [BASE_DIR / 'templates']
+LOGIN_URL = 'login'
+CSRF_TRUSTED_ORIGINS = ['https://*.app.github.dev']
